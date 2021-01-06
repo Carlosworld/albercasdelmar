@@ -20,3 +20,70 @@ if (document.getElementById('mapa')) {
         $('.boton_newsletter').colorbox({ inline: true, width: '50%' });
     })
 })();
+
+
+
+
+const url = 'https://fb-api-5835a-default-rtdb.firebaseio.com/anuncios.json'
+
+
+
+
+// fetch(url)
+//     .then(response => response.json())
+//     .then(data => {
+
+//         let element = document.getElementById('elem')
+
+//         data.forEach(anun => {
+//             element.innerHTML = `
+            
+//             <div class="contenedor-anuncios">
+//             <div class="anuncio">
+//             <img src="${anun.url}" alt="">
+//             <div class="contenido-anuncio">
+//             <h3>${anun.name} </h3>
+//             <p>${anun.descripcion}</p>
+            
+//             </div>
+//             </div>
+//             </div>
+            
+//             `;
+//         });
+//         console.log(element);
+
+
+//         console.log(data);
+//     })
+//     .catch(err => console.log(err))
+
+fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+
+        let output = ` <div class="contenedor-anuncios">`;
+
+        data.forEach(function(anun)  {
+            output += `
+            
+            <div class="anuncio">
+            <img src="${anun.url}" alt="">
+            <div class="contenido-anuncio">
+            <h3>${anun.name} </h3>
+            <p>${anun.descripcion}</p>
+            
+            </div>
+            </div>
+            `;
+        });
+        document.getElementById('elem').innerHTML=output;
+        console.log(element);
+
+
+        console.log(data);
+    })
+    .catch(err => console.log(err))
+
+
+  
