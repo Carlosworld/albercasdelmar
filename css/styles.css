@@ -624,3 +624,17 @@ div.cboxElement {
     padding: 30px!important;
     text-align: center;
 }
+
+/* Redes sociales */
+
+.redes-sociales {
+    text-align: center;
+  }
+.redes-sociales a {
+    color: #E08709;
+    font-size: 3em;
+    margin-right: 20px;
+  }
+.redes-sociales a:last-child{
+    margin-right: 0;
+  }
