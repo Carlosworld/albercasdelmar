@@ -63,7 +63,9 @@ firebase.analytics();
 
 const db = firebase.firestore()
 
-db.collection('anuncio-albercas-del-mar').get()
+db.collection('anuncio-albercas-del-mar')
+    .where("visible", "==", true)
+    .get()
     .then(snapshot => {
         let data = [];
         snapshot.forEach(doc => {
@@ -85,8 +87,8 @@ db.collection('anuncio-albercas-del-mar').get()
             output += `
                 <div class="anuncio">
                 <img src="${anun.url}" alt="">
-                <div class="contenido-anuncio">
-                <h3>${anun.name} </h3>
+                <div class="contenido-anuncio clearfix">
+                <h3>${anun.name}</h3>
                 <p>${anun.descripcion}</p>
                 </div>
                 </div>
