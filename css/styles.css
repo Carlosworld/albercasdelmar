@@ -68,6 +68,10 @@ ul {
     padding: 0;
 }
 
+footer .ultimos-tweets li {
+    margin-bottom: 10px;
+  }
+
 /** Grid **/
 @media (min-width: 768px) {
     .grid {
@@ -167,6 +171,17 @@ div.mapa {
     /* position: absolute; */
 }
 
+@media (min-width: 768px) {
+    .ultimos-tweets {
+       /* padding: 2em; */
+    }
+}
+
+/* @media (min-width: 768px) {
+    .ultimos-tweets {
+       padding: 2em;
+    }
+} */
 /* Header */
 
 .site-header {
