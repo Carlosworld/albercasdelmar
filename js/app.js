@@ -57,11 +57,11 @@ function saveContactInfo(name, email, telefono, message) {
 
 function sendEmail(name, email,telefono, message) {
     Email.send({
-        Host: "smtp.gmail.com",
-        Username: "venta.mexy@gmail.com",
-        Password: "jfuzhvblpivasfvh",
-        To: "venta.mexy@gmail.com",
-        From: "venta.mexy@gmail.com",
+        Host: "smtp.zoho.com",
+        Username: "info@albercasdelmar.com",
+        Password: "uJE0ghSnver3",
+        To: "info@albercasdelmar.com",
+        From: "info@albercasdelmar.com",
         Subject: `${name} sent you a message`,
         Body: `Name: ${name} <br/> Email: ${email} <br/> Tel: ${telefono} <br/> Message: ${message}`,
     })
